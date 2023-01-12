@@ -1,0 +1,19 @@
+{
+  "name": "@lifesg/bb-login",
+  "version": "1.0.0",
+  "description": "An executable to log in to Bitbucket on Cloudflare",
+  "bin": "./bin.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LifeSG/cloudflared-bitbucket-login.git"
+  },
+  "keywords": [
+    "bitbucket-login"
+  ],
+  "author": "LifeSG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LifeSG/cloudflared-bitbucket-login/issues"
+  },
+  "homepage": "https://github.com/LifeSG/cloudflared-bitbucket-login#readme"
+}
