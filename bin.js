@@ -22,8 +22,7 @@ const run = async () => {
 
     console.log("Applying access token to Bitbucket headers");
     await execute(`git config --global --replace-all http.https://bitbucket.ship.gov.sg/.extraheader "cf-access-token: $(cloudflared access token -app=https://bitbucket.ship.gov.sg)"`);
-
-    await execute("export cloudflared_access_token=$(cloudflared access token -app=https://bitbucket.ship.gov.sg)");
+    
     console.log("All good to go!");
 };
 
