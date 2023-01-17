@@ -1,8 +1,12 @@
 {
   "name": "@lifesg/bb-login",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An executable to log in to Bitbucket on Cloudflare",
+  "main": "./bin.js",
   "bin": "./bin.js",
+  "scripts": {
+    "start": "node ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LifeSG/cloudflared-bitbucket-login.git"

@@ -17,13 +17,17 @@ const execute = async (command, showSuccess) => {
 }
 
 const run = async () => {
-    console.log("Retrieving your Cloudflare access token. Please head to your browser to approve");
+    try {
+        console.log("Retrieving your Cloudflare access token. Please head to your browser to approve");
     await execute("cloudflared access login https://bitbucket.ship.gov.sg", true);
 
     console.log("Applying access token to Bitbucket headers");
     await execute(`git config --global --replace-all http.https://bitbucket.ship.gov.sg/.extraheader "cf-access-token: $(cloudflared access token -app=https://bitbucket.ship.gov.sg)"`);
     
     console.log("All good to go!");
+    } catch (error) {
+        console.log("Error encountered: ", error);
+    }
 };
 
 run();
